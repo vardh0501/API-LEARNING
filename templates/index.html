@@ -1,0 +1,104 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <title>Bootstrap Tables</title> 
+    
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+    <link rel="stylesheet" href= 
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
+    
+    <script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+    </script> 
+    
+    <script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"> 
+    </script> 
+    
+    <script src= 
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"> 
+    </script> 
+</head> 
+
+<body> 
+    <div class="container"> 
+    
+        <h1 style="text-align:center;color:green;"> 
+            GeeksforGeeks 
+        </h1> 
+    
+        <!-- Bootstrap table and table-hover classes -->
+        <table class="table table-hover"> 
+            <thead> 
+                <tr> 
+                    <th scope="col">Movie Name</td> 
+                    <th scope="col">Director Name</td> 
+                    <th scope="col">Actor</td> 
+                    <th scope="col">Movie ID</td> 
+                    <th scope="col">Budget</td> 
+
+                </tr> 
+            </thead> 
+            <tbody>
+                {% for i in movie_obj %}
+                <tr> 
+                    <td>{{i.m_name}}</td>
+                    <td>{{i.d_name}}</td>
+                    <td>{{i.actor}}</td>
+                    <td>{{i.movie_id}}</td>
+                    <td>{{i.budget}}</td>
+                </tr> 
+                {% endfor %}
+
+       <table class="table table-hover"> 
+            <thead> 
+                <tr> 
+                    <th scope="col">User</td> 
+                    <th scope="col">Name</td> 
+                    <th scope="col">DOB</td> 
+                    <th scope="col">Phone Number</td> 
+                    
+
+                </tr> 
+            </thead> 
+            <tbody>
+                {% for i in profile_obj %}
+                <tr> 
+                    <td>{{i.user}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.dob}}</td>
+                    <td>{{i.phone_num}}</td>
+                </tr> 
+                {% endfor %}
+
+     <table class="table table-hover"> 
+            <thead> 
+                <tr> 
+                    <th scope="col">Profile</th>
+                    <th scope="col">Movie</th>
+                    <th scope="col">Rating</th>
+
+
+
+                    
+                    
+
+                </tr> 
+            </thead> 
+            <tbody>
+                {% for i in moviefeed_obj %}
+                <tr> 
+                      <td>{{i.profile}}</td>
+                      <td>{{i.movie}}</td>
+                      <td>{{i.rating}}</td>
+                </tr> 
+                {% endfor %}
+
+            </tbody> 
+        </table> 
+    </div> 
+</body> 
+
+</html>                  
